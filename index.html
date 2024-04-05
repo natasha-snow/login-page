@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b32eefd5e1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antic&amp;family=Cormorant:wght@400;600&amp;family=Marcellus&amp;family=Petit+Formal+Script&amp;family=Monoton&amp;family=Playfair+Display:ital,wght@0,400;1,500&amp;family=Poppins:wght@300;500&amp;family=Prata&amp;family=Quicksand&amp;family=Sacramento&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <video autoplay loop mute plays-inline class="back-video">
+        <source src="videos/4779866-hd_1920_1080_30fps.mp4" type="video/mp4" />
+      </video>
+
+      <nav class="nav">
+        <div class="nav-logo">
+          <p>SNOW .</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="#" class="link active">Home</a></li>
+            <li><a href="#" class="link">Blog</a></li>
+            <li><a href="#" class="link">Services</a></li>
+            <li><a href="#" class="link">About</a></li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <button class="btn white-btn" id="loginBtn" onclick="login()">
+            Sign In
+          </button>
+          <button class="btn" id="registerBtn" onclick="register()">
+            Sign Up
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="fa-solid fa-bars" onclick="myMenuFunction"></i>
+        </div>
+      </nav>
+
+      <!------------------------- FORM BOX -------------------------->
+
+      <div class="form-box">
+        <!---------------------- login form  -------------------->
+        <div class="login-container" id="login">
+          <div class="top">
+            <span
+              >Don't have an account?
+              <a href="#" onclick="register()">Sign Up</a></span
+            >
+            <header>Login</header>
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Username or Email"
+            />
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" class="input-field" placeholder="Password" />
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" class="submit" value="Sign In" />
+          </div>
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="login-check" />
+              <label for="login-check">Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="#">Forgot password</a></label>
+            </div>
+          </div>
+        </div>
+
+        <!---------------------- registration form  -------------------->
+        <div class="register-container" id="register">
+          <div class="top">
+            <span
+              >Have an account? <a href="#" onclick="login()">Login</a></span
+            >
+            <header>Sign Up</header>
+          </div>
+          <div class="two-forms">
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="First name" />
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Last name" />
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+          <div class="input-box">
+            <input type="email" class="input-field" placeholder="Email" />
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" class="input-field" placeholder="Password" />
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" class="submit" value="Register" />
+          </div>
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="register-check" />
+              <label for="register-check">Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="#">Terms & Conditions</a></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
